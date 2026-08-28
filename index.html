@@ -4,358 +4,354 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chad Wills — AI-Augmented Analytics &amp; Data Quality</title>
-<meta name="description" content="Quantitative analyst working at the intersection of analytics engineering, data quality, and AI-augmented practice. Portfolio of capability and impact.">
+<meta name="description" content="Quantitative analyst working at the intersection of analytics engineering, data quality, and AI-augmented practice.">
 <meta name="author" content="Chad Wills">
 <meta name="theme-color" content="#0f766e">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Chad Wills — AI-Augmented Analytics &amp; Data Quality">
-<meta property="og:description" content="I own the domain reasoning, the validation, and the judgment. AI removes the mechanical bottleneck. Portfolio of capability and impact.">
+<meta property="og:description" content="I own the reasoning, the validation, and the judgment. AI removes the mechanical bottleneck.">
 <style>
   :root {
     --bg: #fbfbfa;
     --surface: #ffffff;
-    --ink: #16191d;
-    --ink-soft: #4a5158;
-    --ink-faint: #6f777e;
-    --rule: #e3e5e4;
-    --rule-strong: #cdd1d0;
+    --ink: #14171a;
+    --ink-soft: #474e55;
+    --ink-faint: #71787f;
+    --rule: #e4e6e5;
+    --rule-strong: #cfd3d2;
     --accent: #0f766e;
-    --accent-soft: #e6f2f0;
-    --chip-bg: #f1f4f3;
-    --shadow: 0 1px 2px rgba(16,25,29,.04), 0 8px 24px -12px rgba(16,25,29,.10);
-    --maxw: 54rem;
+    --accent-ink: #0b5c56;
+    --accent-soft: #e8f3f1;
+    --chip-bg: #f2f4f3;
+    --shadow: 0 1px 2px rgba(16,25,29,.045), 0 10px 26px -16px rgba(16,25,29,.13);
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #0e1113;
-      --surface: #16191c;
-      --ink: #e9ecee;
-      --ink-soft: #b2bac0;
-      --ink-faint: #8b949b;
-      --rule: #262b2f;
-      --rule-strong: #363c41;
+      --bg: #0d1012;
+      --surface: #15181b;
+      --ink: #eaedef;
+      --ink-soft: #aeb6bc;
+      --ink-faint: #868f96;
+      --rule: #252a2e;
+      --rule-strong: #353b40;
       --accent: #5eead4;
-      --accent-soft: #12312d;
-      --chip-bg: #1d2225;
+      --accent-ink: #7ff0dd;
+      --accent-soft: #10302c;
+      --chip-bg: #1c2124;
       --shadow: none;
     }
   }
 
   * { box-sizing: border-box; }
-
   html { -webkit-text-size-adjust: 100%; }
 
   body {
     margin: 0;
-    padding: 0;
     background: var(--bg);
     color: var(--ink);
     font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 17px;
-    line-height: 1.65;
+    font-size: 16px;
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
 
   .page {
-    max-width: var(--maxw);
+    max-width: 62rem;
     margin: 0 auto;
-    padding: 4.5rem 1.75rem 5rem;
+    padding: 3.5rem 1.5rem 4rem;
   }
 
-  a {
-    color: var(--accent);
-    text-decoration: none;
-    border-bottom: 1px solid var(--rule-strong);
-    border-bottom-color: color-mix(in srgb, var(--accent) 35%, transparent);
-    transition: border-color .15s ease;
-  }
+  a { color: var(--accent-ink); text-decoration: none; border-bottom: 1px solid var(--rule-strong); }
   a:hover { border-bottom-color: var(--accent); }
-  a:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-    border-radius: 2px;
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  /* ---------- Chips ---------- */
+
+  .chips { display: flex; flex-wrap: wrap; gap: .38rem; }
+
+  .chip {
+    font-size: .775rem;
+    line-height: 1.35;
+    padding: .26rem .62rem;
+    border-radius: 999px;
+    background: var(--chip-bg);
+    border: 1px solid var(--rule);
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+
+  .chip-key {
+    background: var(--accent-soft);
+    border-color: transparent;
+    color: var(--accent-ink);
+    font-weight: 570;
   }
 
   /* ---------- Header ---------- */
 
-  header { margin-bottom: 3.25rem; }
+  header {
+    padding-bottom: 1.6rem;
+    border-bottom: 2px solid var(--rule-strong);
+    margin-bottom: 2.5rem;
+  }
 
   .eyebrow {
-    font-size: .72rem;
-    font-weight: 600;
-    letter-spacing: .13em;
+    font-size: .7rem;
+    font-weight: 640;
+    letter-spacing: .14em;
     text-transform: uppercase;
-    color: var(--accent);
-    margin: 0 0 1rem;
+    color: var(--accent-ink);
+    margin: 0 0 .7rem;
   }
 
   h1 {
-    font-size: clamp(2.15rem, 6vw, 3.1rem);
-    line-height: 1.08;
-    letter-spacing: -.028em;
-    font-weight: 680;
-    margin: 0 0 .6rem;
+    font-size: clamp(2.1rem, 5.5vw, 2.9rem);
+    line-height: 1.05;
+    letter-spacing: -.03em;
+    font-weight: 700;
+    margin: 0 0 .55rem;
   }
 
-  .role {
-    font-size: 1.075rem;
+  .tagline {
+    font-size: 1.06rem;
     color: var(--ink-soft);
-    margin: 0 0 1.5rem;
-    max-width: 40rem;
+    margin: 0 0 1.15rem;
+    max-width: 46rem;
   }
-  .role strong { color: var(--ink); font-weight: 600; }
+  .tagline strong { color: var(--ink); font-weight: 620; }
 
-  .contact {
+  .meta {
     display: flex;
     flex-wrap: wrap;
-    gap: .5rem 1.25rem;
+    gap: .4rem 1rem;
     align-items: baseline;
-    font-size: .93rem;
+    margin-top: 1.15rem;
+    font-size: .875rem;
     color: var(--ink-faint);
-    padding-top: 1.35rem;
-    border-top: 1px solid var(--rule);
   }
-  .contact a { word-break: break-all; }
+  .meta a { word-break: break-all; }
 
   /* ---------- Sections ---------- */
 
-  section { margin-bottom: 3.25rem; }
+  section { margin-bottom: 2.6rem; }
 
   h2 {
-    font-size: .76rem;
-    font-weight: 680;
-    letter-spacing: .13em;
+    font-size: .73rem;
+    font-weight: 700;
+    letter-spacing: .15em;
     text-transform: uppercase;
     color: var(--ink-faint);
-    margin: 0 0 1.35rem;
-    padding-bottom: .7rem;
-    border-bottom: 1px solid var(--rule);
+    margin: 0 0 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+  }
+  h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
   }
 
-  h3 {
-    font-size: 1.055rem;
-    font-weight: 640;
-    letter-spacing: -.011em;
-    margin: 0 0 .5rem;
-    color: var(--ink);
-  }
-
-  p { margin: 0 0 1.05rem; }
+  p { margin: 0 0 .85rem; }
   p:last-child { margin-bottom: 0; }
 
-  .lede {
-    font-size: 1.14rem;
-    line-height: 1.62;
-    color: var(--ink-soft);
-  }
-  .lede strong {
-    color: var(--ink);
-    font-weight: 600;
-  }
+  .lede { font-size: 1.03rem; color: var(--ink-soft); max-width: 52rem; }
+  .lede strong { color: var(--ink); font-weight: 620; }
 
   /* ---------- Operating model ---------- */
 
-  .modes {
-    display: grid;
-    gap: 1px;
-    background: var(--rule);
-    border: 1px solid var(--rule);
-    border-radius: 10px;
-    overflow: hidden;
-  }
+  .modes { display: grid; gap: .7rem; margin-bottom: .9rem; }
+  @media (min-width: 48rem) { .modes { grid-template-columns: repeat(3, 1fr); } }
 
   .mode {
     background: var(--surface);
-    padding: 1.4rem 1.5rem;
+    border: 1px solid var(--rule);
+    border-top: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: .95rem 1.05rem;
   }
-
   .mode-name {
-    font-size: .71rem;
-    font-weight: 680;
-    letter-spacing: .11em;
+    font-size: .69rem;
+    font-weight: 700;
+    letter-spacing: .12em;
     text-transform: uppercase;
-    color: var(--accent);
-    margin: 0 0 .45rem;
+    color: var(--accent-ink);
+    margin: 0 0 .35rem;
   }
-
-  .mode p {
-    margin: 0;
-    font-size: .96rem;
-    color: var(--ink-soft);
-  }
+  .mode p { margin: 0; font-size: .89rem; color: var(--ink-soft); }
 
   .governance {
-    margin-top: 1.5rem;
-    padding: 1.3rem 1.5rem;
     background: var(--accent-soft);
-    border-radius: 10px;
-    font-size: .96rem;
+    border-radius: 8px;
+    padding: .95rem 1.15rem;
+    font-size: .9rem;
     color: var(--ink-soft);
   }
-  .governance strong { color: var(--ink); font-weight: 620; }
   .governance p { margin: 0; }
+  .governance b { color: var(--ink); font-weight: 640; }
 
-  /* ---------- Capability cards ---------- */
+  /* ---------- Work cards ---------- */
 
-  .cards { display: grid; gap: 1.1rem; }
+  .cards { display: grid; gap: .85rem; }
+  @media (min-width: 58rem) { .cards { grid-template-columns: repeat(2, 1fr); gap: .85rem; } }
 
   .card {
     background: var(--surface);
     border: 1px solid var(--rule);
-    border-radius: 10px;
-    padding: 1.5rem 1.6rem;
+    border-radius: 9px;
+    padding: 1.15rem 1.25rem;
     box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
   }
 
-  .card .tag {
-    display: inline-block;
-    font-size: .68rem;
-    font-weight: 650;
-    letter-spacing: .09em;
+  .tag {
+    align-self: flex-start;
+    font-size: .645rem;
+    font-weight: 700;
+    letter-spacing: .1em;
     text-transform: uppercase;
+    color: var(--accent-ink);
+    background: var(--accent-soft);
+    padding: .2rem .5rem;
+    border-radius: 3px;
+    margin-bottom: .6rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+    font-weight: 660;
+    letter-spacing: -.012em;
+    margin: 0 0 .45rem;
+    line-height: 1.3;
+  }
+
+  .setup {
+    font-size: .89rem;
     color: var(--ink-faint);
-    background: var(--chip-bg);
-    padding: .22rem .55rem;
-    border-radius: 4px;
-    margin-bottom: .85rem;
+    font-style: italic;
+    margin: 0 0 .7rem;
   }
 
-  .card p {
-    font-size: .97rem;
+  ul.b { list-style: none; margin: 0 0 .85rem; padding: 0; display: grid; gap: .42rem; }
+  ul.b li {
+    position: relative;
+    padding-left: .95rem;
+    font-size: .885rem;
+    line-height: 1.5;
     color: var(--ink-soft);
-    margin-bottom: .8rem;
   }
-  .card p:last-child { margin-bottom: 0; }
+  ul.b li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .58em;
+    width: .3rem; height: .3rem;
+    border-radius: 50%;
+    background: var(--accent);
+  }
 
-  .card .outcome {
+  .outcome {
+    margin-top: auto;
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: .55rem .75rem;
+    font-size: .865rem;
+    line-height: 1.45;
     color: var(--ink);
-    padding-top: .85rem;
-    border-top: 1px solid var(--rule);
   }
-  .card .outcome b {
-    font-weight: 650;
-    color: var(--accent);
-    letter-spacing: .01em;
+  .outcome b {
+    color: var(--accent-ink);
+    font-weight: 700;
+    letter-spacing: .02em;
   }
 
   /* ---------- Skills ---------- */
 
-  .skills { display: grid; gap: 1.35rem; }
-
-  @media (min-width: 40rem) {
-    .skills { grid-template-columns: repeat(2, 1fr); gap: 1.35rem 2.25rem; }
-  }
+  .skills { display: grid; gap: 1rem; }
+  @media (min-width: 48rem) { .skills { grid-template-columns: repeat(2, 1fr); gap: 1rem 2rem; } }
 
   .skill-group h3 {
-    font-size: .84rem;
-    font-weight: 660;
-    letter-spacing: .04em;
+    font-size: .715rem;
+    font-weight: 700;
+    letter-spacing: .1em;
     text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: .4rem;
-  }
-  .skill-group p {
-    font-size: .93rem;
-    color: var(--ink-soft);
-    margin: 0;
+    color: var(--ink-faint);
+    margin: 0 0 .45rem;
   }
 
   /* ---------- Principles ---------- */
 
-  ul.principles {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: .9rem;
-  }
-
+  ul.principles { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+  @media (min-width: 48rem) { ul.principles { grid-template-columns: repeat(2, 1fr); gap: .55rem 2rem; } }
   ul.principles li {
     position: relative;
-    padding-left: 1.6rem;
-    font-size: .97rem;
+    padding-left: 1.05rem;
+    font-size: .9rem;
     color: var(--ink-soft);
   }
   ul.principles li::before {
     content: "";
     position: absolute;
-    left: .2rem;
-    top: .68em;
-    width: .42rem;
-    height: .42rem;
-    border-radius: 50%;
+    left: 0; top: .6em;
+    width: .34rem; height: .34rem;
     background: var(--accent);
+    transform: rotate(45deg);
   }
-  ul.principles b {
-    color: var(--ink);
-    font-weight: 620;
-  }
+  ul.principles b { color: var(--ink); font-weight: 640; }
 
   /* ---------- Recognition ---------- */
 
-  ul.recognition {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: .8rem;
-  }
+  ul.recognition { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
+  @media (min-width: 48rem) { ul.recognition { grid-template-columns: repeat(2, 1fr); gap: .6rem 1.6rem; } }
   ul.recognition li {
-    font-size: .96rem;
+    font-size: .885rem;
     color: var(--ink-soft);
-    padding-left: 1.15rem;
-    border-left: 2px solid var(--rule-strong);
+    padding-left: .9rem;
+    border-left: 2px solid var(--accent);
+    line-height: 1.5;
   }
 
   /* ---------- Footer ---------- */
 
   footer {
-    margin-top: 4rem;
-    padding-top: 1.5rem;
+    margin-top: 3rem;
+    padding-top: 1.1rem;
     border-top: 1px solid var(--rule);
-    font-size: .85rem;
+    font-size: .8rem;
     color: var(--ink-faint);
   }
-  footer p { margin-bottom: .6rem; }
 
   /* ---------- Print ---------- */
 
   @media print {
     :root {
-      --bg: #fff;
-      --surface: #fff;
-      --ink: #000;
-      --ink-soft: #1f2225;
-      --ink-faint: #45494c;
-      --rule: #c8cbcd;
-      --rule-strong: #a8acae;
-      --accent: #0b5750;
-      --accent-soft: #fff;
-      --chip-bg: #fff;
-      --shadow: none;
+      --bg: #fff; --surface: #fff; --ink: #000; --ink-soft: #1e2124; --ink-faint: #494d50;
+      --rule: #c9cccd; --rule-strong: #9fa3a5; --accent: #0b5750; --accent-ink: #0b5750;
+      --accent-soft: #f2f6f5; --chip-bg: #fff; --shadow: none;
     }
-    body { font-size: 10.5pt; line-height: 1.48; }
+    body { font-size: 9.6pt; line-height: 1.4; }
     .page { max-width: none; padding: 0; }
-    header { margin-bottom: 1.5rem; }
-    h1 { font-size: 22pt; }
-    .role { font-size: 11pt; }
-    .lede { font-size: 11pt; }
-    section { margin-bottom: 1.4rem; }
-    h2 { margin-bottom: .8rem; padding-bottom: .35rem; }
-    .card, .mode, .governance {
+    header { margin-bottom: 1.1rem; padding-bottom: .8rem; }
+    h1 { font-size: 20pt; }
+    .tagline, .lede { font-size: 10pt; }
+    section { margin-bottom: 1.1rem; }
+    h2 { margin-bottom: .6rem; }
+    .cards { grid-template-columns: 1fr; gap: .5rem; }
+    .modes { grid-template-columns: repeat(3, 1fr); gap: .4rem; }
+    .card, .mode, .governance, .outcome {
       box-shadow: none;
       break-inside: avoid;
       page-break-inside: avoid;
-      padding: .8rem .9rem;
     }
-    .cards { gap: .6rem; }
-    .governance { border: 1px solid var(--rule); }
-    .card .tag { border: 1px solid var(--rule); padding: .1rem .35rem; }
-    a { border-bottom: none; color: #000; }
-    footer { margin-top: 1.5rem; }
+    .card { padding: .6rem .7rem; border-color: var(--rule); }
+    .chip { border: 1px solid var(--rule); }
+    a { color: #000; border-bottom: none; }
     h2, h3 { break-after: avoid; page-break-after: avoid; }
+    footer { margin-top: 1rem; }
   }
 </style>
 </head>
@@ -365,411 +361,276 @@
   <header>
     <p class="eyebrow">Analytics &middot; Data Quality &middot; AI-Augmented Practice</p>
     <h1>Chad Wills</h1>
-    <p class="role">
-      Quantitative Analyst at <strong>Asurion</strong>. I build the data quality, reporting,
-      and automation layer that enterprise programs are measured on &mdash; and I do it with a
-      deliberate human-and-AI operating model rather than ad hoc tooling.
+    <p class="tagline">
+      Quantitative Analyst at <strong>Asurion</strong>. I build the data quality, reporting, and
+      automation layer that enterprise programs are measured on.
     </p>
-    <p class="contact">
-      <span>LinkedIn:</span>
-      <a href="{{LINKEDIN_URL}}">{{LINKEDIN_URL}}</a>
-    </p>
+    <div class="chips">
+      <span class="chip chip-key">Data Quality Engineering</span>
+      <span class="chip chip-key">Root-Cause Investigation</span>
+      <span class="chip chip-key">BI as Code</span>
+      <span class="chip chip-key">AI Enablement</span>
+      <span class="chip chip-key">Pipeline Automation</span>
+      <span class="chip chip-key">Executive Communication</span>
+    </div>
+    <p class="meta"><span>LinkedIn:</span> <a href="{{LINKEDIN_URL}}">{{LINKEDIN_URL}}</a></p>
   </header>
 
-  <section id="profile">
+  <section>
     <h2>Profile</h2>
     <p class="lede">
-      I work where analytics meets engineering: making the numbers in front of executives
-      defensible, and making the systems that produce them durable. Most of what I deliver
-      starts as a question nobody can answer confidently &mdash; a metric that looks wrong, a
-      field that is silently empty, a pipeline that fails without telling anyone &mdash; and ends
-      as a documented root cause, a fix routed to the team that owns it, and a check that
-      catches the next occurrence automatically.
+      I make the numbers executives rely on defensible, and the systems behind them durable. The
+      work usually starts as a question nobody can answer confidently &mdash; a metric that looks
+      wrong, a field that is silently empty, a pipeline that fails without telling anyone &mdash;
+      and ends as a documented root cause, a fix routed to the team that owns it, and a check that
+      catches the next one automatically.
     </p>
     <p class="lede">
-      <strong>AI is central to how I do that, and it is not autocomplete.</strong> I own the
-      domain reasoning, the data validation, and the judgment calls. AI removes the mechanical
-      bottleneck &mdash; reading at volume, propagating a change across formats and layers,
-      generating the queries that test my hypothesis. The result is enterprise-grade output at
-      a pace that single-handed work cannot reach, with a human accountable at every gate that
-      matters.
+      <strong>AI is central to how I work, and it is not autocomplete.</strong> I own the domain
+      reasoning, the validation, and the judgment; AI removes the mechanical bottleneck. The
+      governance around it is what makes that speed safe to use.
     </p>
   </section>
 
-  <section id="operating-model">
+  <section>
     <h2>How I work with AI</h2>
     <div class="modes">
       <div class="mode">
         <p class="mode-name">Investigative</p>
-        <p>
-          I define the hypothesis; AI generates the queries that test it. When the data
-          contradicts the hypothesis &mdash; which is often the most valuable outcome &mdash;
-          I decide the next direction. The pivots that shape a finding come from evidence and
-          domain context, not from the model.
-        </p>
+        <p>I set the hypothesis; AI writes the queries that test it. When the data contradicts me
+        &mdash; often the most valuable outcome &mdash; I choose the next direction.</p>
       </div>
       <div class="mode">
         <p class="mode-name">Comprehension</p>
-        <p>
-          AI processes volumes of structured text that would take days to read manually
-          &mdash; model definitions, pipeline logic, schema exports. I validate the output
-          against what I know about the business and catch what is undocumented, misleading,
-          or quietly wrong.
-        </p>
+        <p>AI reads structured material at a volume I cannot. I validate it against domain
+        knowledge and catch what is undocumented, misleading, or quietly wrong.</p>
       </div>
       <div class="mode">
         <p class="mode-name">Execution</p>
-        <p>
-          I define the transformation spec; AI propagates it systematically across files,
-          formats, and layers that each have their own schema and syntax. I own correctness,
-          feed errors back, and close the loop. Judgment stays the only limit on throughput.
-        </p>
+        <p>I define the spec; AI propagates it across files, formats, and layers. I own
+        correctness, feed errors back, and close the loop.</p>
       </div>
     </div>
     <div class="governance">
-      <p>
-        <strong>The part people underestimate is the governance layer.</strong> Anything
-        irreversible is gated on an explicit human decision. Checks fail closed rather than
-        passing quietly. Queries are aggregate-first and privacy-safe by default. Findings are
-        written down where they survive the session, so the next person does not rediscover
-        them. Speed without those constraints is not an asset &mdash; it is just a faster way
-        to be wrong.
-      </p>
+      <p><b>The governance layer is the part people underestimate.</b> Anything irreversible is
+      gated on an explicit human decision. Checks fail closed rather than passing quietly. Queries
+      are aggregate-first and privacy-safe by default. Findings are written down where they survive
+      the session. Speed without those constraints is not an asset &mdash; it is just a faster way
+      to be wrong.</p>
     </div>
   </section>
 
-  <section id="work">
+  <section>
     <h2>Selected work</h2>
     <div class="cards">
 
       <article class="card">
         <span class="tag">Data Quality Platform</span>
         <h3>Automated data-quality and lineage auditing</h3>
-        <p>
-          Reporting trust depended on somebody eventually noticing that a number looked wrong.
-          Upstream schema changes, partial loads, and stalled refreshes reached stakeholders
-          before they reached anyone who could fix them.
-        </p>
-        <p>
-          I built a daily audit that traces recursive upstream lineage across every object the
-          reporting dataset consumes and surfaces only what is actually out of sync &mdash;
-          schema drift, row-count divergence, freshness lag. Then I re-architected it off any
-          dependency on an individual's machine into a fully server-side pipeline publishing to
-          a cloud lakehouse. Settled-window logic suppresses false alarms from loads still in
-          flight; a single configuration file is the source of truth; token refresh, write
-          retries, and guards against partial-wipe states keep a mid-run failure from
-          corrupting the result.
-        </p>
-        <p class="outcome">
-          <b>Outcome:</b> silent upstream breakage became a detected, attributable finding
-          &mdash; caught and routed before a stakeholder ever saw a wrong number.
-        </p>
+        <p class="setup">Reporting trust depended on someone eventually noticing a number looked wrong.</p>
+        <ul class="b">
+          <li>Built a daily audit tracing recursive upstream lineage across every object the reporting dataset consumes, surfacing only genuine drift: schema change, row-count divergence, freshness lag.</li>
+          <li>Re-architected it off any dependency on an individual's machine into a server-side pipeline publishing to a cloud lakehouse.</li>
+          <li>Hardened it for production: settled-window logic suppresses alarms from loads still in flight; token refresh, write retries, and partial-wipe guards keep a mid-run failure from corrupting results.</li>
+        </ul>
+        <p class="outcome"><b>Outcome</b> &mdash; silent upstream breakage became a detected, attributable finding, caught before a stakeholder ever saw a wrong number.</p>
       </article>
 
       <article class="card">
-        <span class="tag">Root-Cause Investigation</span>
-        <h3>Reframing the question before spending effort on the wrong fix</h3>
-        <p>
-          The most expensive failure in analytics is a confident investigation of the wrong
-          cause. Escalations arrive pre-diagnosed: a client's feed is blamed for a field that
-          is actually populated by an internal warehouse process; a rate that spiked is
-          assumed to be a real business shift; a count that "seems too low" is assumed to be a
-          capture gap.
-        </p>
-        <p>
-          I read the lineage before pulling data, then design aggregate-only queries that make
-          each hypothesis falsifiable. Repeatedly this has moved a problem to an entirely
-          different owner: a reported client-data gap resolved to an internal pipeline that had
-          never written the records at all; a leadership escalation over a spiking denial rate
-          traced to a residual status code from a filter family fixed earlier; a suspiciously
-          low subscriber count reconciled end to end and reframed as a definitional
-          expectation, not a defect. When the data disproved my own theory, I reported that
-          too.
-        </p>
-        <p class="outcome">
-          <b>Outcome:</b> effort and remediation land on the real defect and the team that
-          owns it, with evidence strong enough to survive challenge in the room.
-        </p>
+        <span class="tag">Investigation</span>
+        <h3>Reframing the question before fixing the wrong thing</h3>
+        <p class="setup">The most expensive failure in analytics is a confident investigation of the wrong cause.</p>
+        <ul class="b">
+          <li>Read the lineage before pulling data, then design aggregate-only queries that make each hypothesis falsifiable.</li>
+          <li>Moved problems to entirely different owners: a client-blamed data gap traced to an internal pipeline that had never written the records at all; a climbing denial rate traced to a residual status code from a filter family corrected earlier.</li>
+          <li>Reframed a "this count looks too low" escalation as a definitional expectation after reconciling the population end to end &mdash; and said so when the data disproved my own theory.</li>
+        </ul>
+        <p class="outcome"><b>Outcome</b> &mdash; remediation lands on the real defect and the team that owns it, with evidence that survives challenge in the room.</p>
       </article>
 
       <article class="card">
         <span class="tag">AI Enablement</span>
         <h3>Turning expert workflows into reusable agent tooling</h3>
-        <p>
-          The workflows that made me effective &mdash; triaging incoming requests, planning and
-          working a ticket backlog, producing a data-quality brief, mapping how a business flow
-          moves through the data &mdash; all lived in my head and ran only when I ran them.
-        </p>
-        <p>
-          I generalized each into a client-agnostic, configuration-driven agent skill:
-          discovery of the active context, deference to local rules and domain knowledge, and
-          explicit approval gates before anything writes to a tracker or a channel. Advisor-only
-          boundaries are enforced by design rather than by good intentions. I also built the
-          attribution layer around it &mdash; reconciling tooling usage back to specific
-          deliverables so the cost of AI-assisted work is auditable instead of asserted, and
-          leaving unmatched activity unassigned rather than forcing a match.
-        </p>
-        <p class="outcome">
-          <b>Outcome:</b> individual expertise became tooling colleagues can run, with the
-          human checkpoints preserved and the spend defensible.
-        </p>
+        <p class="setup">The workflows that made me effective lived in my head and ran only when I ran them.</p>
+        <ul class="b">
+          <li>Generalized request triage, backlog planning, data-quality briefing, and flow-architecture mapping into client-agnostic, configuration-driven agent skills.</li>
+          <li>Built approval gates and advisor-only boundaries into the design, so nothing reaches a tracker or a channel without an explicit human decision.</li>
+          <li>Added a usage-attribution layer reconciling tooling spend back to specific deliverables, leaving unmatched activity unassigned rather than forcing a match.</li>
+        </ul>
+        <p class="outcome"><b>Outcome</b> &mdash; individual expertise became tooling colleagues can run, with the cost auditable instead of asserted.</p>
       </article>
 
       <article class="card">
         <span class="tag">BI as Code</span>
         <h3>Semantic models and reports as version-controlled text</h3>
-        <p>
-          Traditional business-intelligence development is click-through. Every measure,
-          visual, filter, and title changes in a desktop interface, cannot be code-reviewed,
-          and cannot be reliably compared between versions. Errors are invisible until someone
-          spots a wrong number in a meeting.
-        </p>
-        <p>
-          I author semantic model definitions and report layouts directly as text: measures and
-          calculated columns, relationships and their active-versus-inactive behavior, row-level
-          security, and report visual definitions with their query bindings and formatting. That
-          makes model work diffable, reviewable, and scriptable &mdash; including repeatable
-          transform scripts that apply a cleanup specification consistently instead of by hand.
-          I have also reverse-engineered embedded queries out of published models into
-          source-of-truth files so the logic can be reviewed, diffed, and shared.
-        </p>
-        <p class="outcome">
-          <b>Outcome:</b> reporting gained the same rigor as the pipelines behind it, and an
-          entire class of "someone clicked the wrong thing" errors disappeared.
-        </p>
+        <p class="setup">Click-through report development cannot be reviewed, diffed, or trusted.</p>
+        <ul class="b">
+          <li>Author semantic models and report layouts directly as text: measures, calculated columns, relationship behavior, row-level security, and visual query bindings.</li>
+          <li>Built repeatable transform scripts that apply a cleanup specification consistently instead of by hand.</li>
+          <li>Reverse-engineered embedded queries out of published models into source-of-truth files so the logic can be reviewed, diffed, and shared.</li>
+        </ul>
+        <p class="outcome"><b>Outcome</b> &mdash; reporting gained the rigor of the pipelines behind it, and an entire class of "someone clicked the wrong thing" errors disappeared.</p>
       </article>
 
       <article class="card">
         <span class="tag">Automation</span>
         <h3>Unattended, self-healing reporting operations</h3>
-        <p>
-          A recurring workbook refresh consumed skilled analyst time every morning: open, wait,
-          trigger connections, save, eyeball the result. It also meant fresh data depended on a
-          specific person being at a desk.
-        </p>
-        <p>
-          I automated the whole cycle on a schedule, then hardened it against the failure modes
-          that only appear in production &mdash; refreshes reporting success instantly because
-          the queries were running asynchronously, cloud-sync holding files locked at exactly
-          the scheduled hour, orphaned application sessions, dialogs blocking an unattended run,
-          and formatting silently lost on write. The pipeline now logs, backs up, retries with
-          process cleanup, notifies a chat channel on success and failure, and recovers from
-          transient faults on its own. When it went quiet for several days, the root cause
-          turned out to be sync contention rather than the obvious suspect, and I fixed the
-          cause instead of padding a timeout.
-        </p>
-        <p class="outcome">
-          <b>Outcome:</b> a daily manual ritual became an unattended, self-reporting service
-          with no single-person dependency.
-        </p>
+        <p class="setup">A daily refresh ritual burned analyst time and made fresh data depend on one person being at a desk.</p>
+        <ul class="b">
+          <li>Automated the full cycle on a schedule with logging, backups, retries with process cleanup, and chat notification on both success and failure.</li>
+          <li>Diagnosed the failure modes that only appear in production: refreshes reporting success instantly because queries ran asynchronously, cloud sync holding files locked at exactly the scheduled hour, orphaned sessions, and dialogs blocking an unattended run.</li>
+          <li>Traced a multi-day silent outage to sync contention rather than the obvious suspect, and fixed the cause instead of padding a timeout.</li>
+        </ul>
+        <p class="outcome"><b>Outcome</b> &mdash; a manual ritual became an unattended, self-reporting service with no single-person dependency.</p>
       </article>
 
       <article class="card">
         <span class="tag">Executive Communication</span>
-        <h3>Translating technical remediation into a decision leaders can make</h3>
-        <p>
-          Technical wins die in translation. Leadership does not need the query; it needs to
-          know what the reporting is for, what the risk was, what changed, what proves it, what
-          keeps it working, what it cost, and where the limits are.
-        </p>
-        <p>
-          I build executive material as a connected argument in that order, with every slide
-          title stating a business takeaway rather than a topic. I insist on labeled estimates
-          over invented precision, on a break-even test rather than a fabricated return figure,
-          and on stating the boundaries of a claim explicitly. The same finding gets delivered
-          in layered versions &mdash; full technical detail for the system owner, filter and
-          decision history for the analyst, and a version stripped of every table and column
-          reference for the executive who has to act on it.
-        </p>
-        <p class="outcome">
-          <b>Outcome:</b> technical investment gets understood and funded on its merits, and
-          escalations close with a decision instead of another meeting.
-        </p>
+        <h3>Translating remediation into a decision leaders can make</h3>
+        <p class="setup">Technical wins die in translation.</p>
+        <ul class="b">
+          <li>Build executive material as a connected argument &mdash; purpose, risk, change, proof, durability, cost, limits &mdash; with every title stating a business takeaway rather than a topic.</li>
+          <li>Insist on labeled estimates over invented precision, and a break-even test rather than a fabricated return figure.</li>
+          <li>Deliver the same finding in layered versions: full technical detail for the system owner, decision history for the analyst, and a version stripped of every table reference for the executive who has to act on it.</li>
+        </ul>
+        <p class="outcome"><b>Outcome</b> &mdash; technical investment gets funded on its merits, and escalations close with a decision instead of another meeting.</p>
       </article>
 
       <article class="card">
         <span class="tag">Knowledge Engineering</span>
         <h3>Converting tribal expertise into institutional capability</h3>
-        <p>
-          In programs spanning multiple countries and data sources, undocumented business logic
-          is operational risk. When the person who knows why a correction exists or how a
-          reimbursement tier works moves on, the next analyst either reinvents it slowly or
-          gets it wrong expensively.
-        </p>
-        <p>
-          I turn model exports, pipeline code, and scattered decisions into onboarding-grade
-          references: architecture and data-flow documentation, field-definition dictionaries
-          with source logic and availability, metric definitions with lineage, and investigation
-          logs that record why a call was made. Domain knowledge is captured as a durable
-          artifact at the moment it is discovered, not reconstructed later from memory.
-        </p>
-        <p class="outcome">
-          <b>Outcome:</b> onboarding time drops, handoffs stop being risky, and the program can
-          answer "how was this number calculated" under audit.
-        </p>
+        <p class="setup">Undocumented business logic is operational risk wearing a disguise.</p>
+        <ul class="b">
+          <li>Turn model exports, pipeline code, and scattered decisions into onboarding-grade references: architecture and data-flow documentation, field dictionaries with source logic, metric definitions with lineage.</li>
+          <li>Capture domain knowledge as a durable artifact at the moment it is discovered, not reconstructed later from memory.</li>
+          <li>Keep investigation logs that preserve why a call was made, not merely what was decided.</li>
+        </ul>
+        <p class="outcome"><b>Outcome</b> &mdash; onboarding shortens, handoffs stop being risky, and the program can answer "how was this calculated" under audit.</p>
       </article>
 
       <article class="card">
-        <span class="tag">Collaboration &amp; Enablement</span>
-        <h3>Aligning definitions across functions, and lifting the people around me</h3>
-        <p>
-          Reporting accuracy is rarely blocked by a technical problem alone. It is blocked by
-          legal, client-facing, engineering, product, and analytics functions holding different
-          definitions of the same metric, across time zones.
-        </p>
-        <p>
-          I do the cross-functional alignment work that makes a definition stick, and I route
-          fixes to the owning team with the evidence pre-assembled rather than escalating a
-          complaint. Alongside that I mentor analysts into the models and pipelines &mdash;
-          walking peers through security configuration and semantic-model connections,
-          reviewing their work, and building the reference material specifically so colleagues
-          can self-serve. I also flag limitations and caveats to stakeholders up front, before
-          they become someone's surprise.
-        </p>
-        <p class="outcome">
-          <b>Outcome:</b> capability scales past a single person, and stakeholders trust both
-          the number and the caveats attached to it.
-        </p>
+        <span class="tag">Collaboration</span>
+        <h3>Aligning definitions, and lifting the people around me</h3>
+        <p class="setup">Reporting accuracy is rarely blocked by a technical problem alone.</p>
+        <ul class="b">
+          <li>Do the cross-functional alignment that makes a definition stick across legal, client-facing, engineering, product, and analytics teams in different time zones.</li>
+          <li>Route fixes to the owning team with the evidence pre-assembled, rather than escalating a complaint.</li>
+          <li>Mentor analysts into the models and pipelines, and build reference material specifically so colleagues can self-serve.</li>
+        </ul>
+        <p class="outcome"><b>Outcome</b> &mdash; capability scales past a single person, and stakeholders trust both the number and the caveats attached to it.</p>
       </article>
 
     </div>
   </section>
 
-  <section id="skills">
+  <section>
     <h2>Technical range</h2>
     <div class="skills">
+
       <div class="skill-group">
         <h3>Data &amp; Query</h3>
-        <p>
-          SQL across Hive, Presto, Trino, and Databricks dialects. Multi-CTE pipeline design,
-          merge logic, query validation and explain-plan verification, schema and lineage
-          analysis, reconciliation across pipeline layers, ODBC connectivity.
-        </p>
+        <div class="chips">
+          <span class="chip">SQL</span><span class="chip">Hive</span><span class="chip">Presto</span>
+          <span class="chip">Trino</span><span class="chip">Databricks</span>
+          <span class="chip">Multi-CTE pipelines</span><span class="chip">Merge logic</span>
+          <span class="chip">Lineage analysis</span><span class="chip">ODBC</span>
+        </div>
       </div>
+
       <div class="skill-group">
         <h3>BI &amp; Semantic Modeling</h3>
-        <p>
-          Power BI, TMDL model definitions, DAX, Power Query (M), enhanced report format
-          definitions as JSON, paginated report definitions, star-schema design, relationship
-          and context management, row-level security.
-        </p>
+        <div class="chips">
+          <span class="chip">Power BI</span><span class="chip">TMDL</span><span class="chip">DAX</span>
+          <span class="chip">Power Query (M)</span><span class="chip">PBIR JSON</span>
+          <span class="chip">Paginated reports</span><span class="chip">Star schema</span>
+          <span class="chip">Row-level security</span>
+        </div>
       </div>
+
       <div class="skill-group">
         <h3>Cloud &amp; Lakehouse</h3>
-        <p>
-          Microsoft Fabric, OneLake, Delta table publishing, semantic model partitioning
-          against a lakehouse endpoint, gateway-free and machine-independent architectures,
-          scheduled server-side pipelines.
-        </p>
+        <div class="chips">
+          <span class="chip">Microsoft Fabric</span><span class="chip">OneLake</span>
+          <span class="chip">Delta tables</span><span class="chip">Lakehouse endpoints</span>
+          <span class="chip">Server-side pipelines</span>
+        </div>
       </div>
+
       <div class="skill-group">
         <h3>Automation &amp; Engineering</h3>
-        <p>
-          Python and PowerShell, task scheduling, COM automation, self-verifying runners with
-          pre-flight validation, retry and resilience patterns, structured logging, webhook
-          notification, failure-mode hardening.
-        </p>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">PowerShell</span>
+          <span class="chip">Task scheduling</span><span class="chip">COM automation</span>
+          <span class="chip">Retry &amp; resilience</span><span class="chip">Structured logging</span>
+          <span class="chip">Webhooks</span>
+        </div>
       </div>
+
       <div class="skill-group">
         <h3>AI-Augmented Practice</h3>
-        <p>
-          Agentic development environments and frontier models, reusable agent skills and
-          subagents, rules and guardrails as configuration, approval-gated automation design,
-          prompt and workflow architecture, usage attribution and cost accounting.
-        </p>
+        <div class="chips">
+          <span class="chip">Agentic IDEs</span><span class="chip">Frontier models</span>
+          <span class="chip">Agent skills &amp; subagents</span><span class="chip">Guardrails as config</span>
+          <span class="chip">Approval-gated automation</span><span class="chip">Usage attribution</span>
+        </div>
       </div>
+
       <div class="skill-group">
         <h3>Analysis &amp; Investigation</h3>
-        <p>
-          Root-cause analysis, hypothesis-driven diagnostics, variance decomposition,
-          end-to-end reconciliation, confidence-tiered classification frameworks, anomaly and
-          fraud pattern enrichment, definitional auditing.
-        </p>
+        <div class="chips">
+          <span class="chip">Root-cause analysis</span><span class="chip">Variance decomposition</span>
+          <span class="chip">Reconciliation</span><span class="chip">Hypothesis testing</span>
+          <span class="chip">Anomaly &amp; fraud enrichment</span>
+        </div>
       </div>
+
       <div class="skill-group">
         <h3>Governance &amp; Data Quality</h3>
-        <p>
-          Data-quality frameworks with fail-closed checks, joined-field coverage auditing,
-          drift and freshness monitoring, privacy-safe aggregate-only methodology, evidence
-          populations and ownership routing.
-        </p>
+        <div class="chips">
+          <span class="chip">Fail-closed checks</span><span class="chip">Coverage auditing</span>
+          <span class="chip">Drift &amp; freshness monitoring</span><span class="chip">Privacy-safe methodology</span>
+          <span class="chip">Ownership routing</span>
+        </div>
       </div>
+
       <div class="skill-group">
         <h3>Ways of Working</h3>
-        <p>
-          Git and pull-request review, issue tracking and workflow discipline, technical and
-          executive writing, stakeholder communication across technical and leadership
-          audiences, knowledge-base and documentation authoring.
-        </p>
+        <div class="chips">
+          <span class="chip">Git</span><span class="chip">Pull-request review</span>
+          <span class="chip">Issue tracking</span><span class="chip">Technical writing</span>
+          <span class="chip">Executive communication</span><span class="chip">Documentation</span>
+        </div>
       </div>
+
     </div>
   </section>
 
-  <section id="principles">
+  <section>
     <h2>How I operate</h2>
     <ul class="principles">
-      <li>
-        <b>Reframe before you fix.</b> Read the lineage and challenge the premise of the
-        request before spending a single query on the assumed cause.
-      </li>
-      <li>
-        <b>Make every claim falsifiable.</b> A finding is only useful if there is a specific
-        test that would have disproved it, and I ran that test.
-      </li>
-      <li>
-        <b>Privacy-safe by default.</b> Aggregate-first methods, sensitive fields routed to
-        count-only paths, identifier-level output written to controlled destinations only.
-      </li>
-      <li>
-        <b>Report honestly, including against yourself.</b> When the data disproves my own
-        hypothesis, that is the finding, and it ships as-is.
-      </li>
-      <li>
-        <b>Fix the cause, not the symptom.</b> Padding a timeout, masking a bad value, or
-        widening a filter buys quiet, not correctness.
-      </li>
-      <li>
-        <b>Leave a durable artifact.</b> Every investigation ends in documentation, a check, or
-        tooling &mdash; not just an answer in a thread.
-      </li>
-      <li>
-        <b>Gate anything irreversible on a human.</b> Automation earns speed everywhere except
-        the decision to commit, publish, or notify.
-      </li>
+      <li><b>Reframe before you fix.</b> Challenge the premise before spending a query on the assumed cause.</li>
+      <li><b>Make every claim falsifiable.</b> A finding counts only if a specific test could have disproved it.</li>
+      <li><b>Privacy-safe by default.</b> Aggregate-first methods; sensitive fields routed to count-only paths.</li>
+      <li><b>Report honestly, including against yourself.</b> When the data disproves my theory, that is the finding.</li>
+      <li><b>Fix the cause, not the symptom.</b> Padding a timeout or widening a filter buys quiet, not correctness.</li>
+      <li><b>Leave a durable artifact.</b> Every investigation ends in documentation, a check, or tooling.</li>
+      <li><b>Gate anything irreversible on a human.</b> Automation earns speed everywhere except the decision to commit.</li>
     </ul>
   </section>
 
-  <section id="recognition">
+  <section>
     <h2>Recognition</h2>
     <ul class="recognition">
-      <li>
-        Recognized by program leadership for handling requirements and communication across
-        multiple teams through successive global client reporting launches, and for the quality
-        of the visualizations delivered.
-      </li>
-      <li>
-        Repeatedly credited for fast, practical support on client escalations that unblocked
-        client-facing answers under time pressure.
-      </li>
-      <li>
-        Peer-voted recognition in an internal technology showcase for presenting real-world,
-        practical applications of AI tooling to a wider analyst audience.
-      </li>
-      <li>
-        Acknowledged across functions for cross-team knowledge sharing, mentoring, and
-        willingness to jump into other teams' problems &mdash; and for technical credibility in
-        coordinating analytics work.
-      </li>
+      <li>Recognized by program leadership for handling requirements and communication across multiple teams through successive global client reporting launches, and for the quality of the visualizations delivered.</li>
+      <li>Repeatedly credited for fast, practical support on client escalations that unblocked client-facing answers under time pressure.</li>
+      <li>Peer-voted recognition in an internal technology showcase for presenting real-world applications of AI tooling to a wider analyst audience.</li>
+      <li>Acknowledged across functions for knowledge sharing, mentoring, and technical credibility in coordinating analytics work.</li>
     </ul>
   </section>
 
   <footer>
-    <p>
-      This page describes professional capability in general terms. It contains no
-      client-identifying information, no proprietary system or schema details, and no
-      confidential business metrics.
-    </p>
-    <p>Chad Wills</p>
+    <p>This page describes professional capability in general terms. It contains no client-identifying
+    information, no proprietary system or schema details, and no confidential business metrics.</p>
   </footer>
 
 </main>
